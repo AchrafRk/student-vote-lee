@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Student Vote</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/bundle.js"></script>
+</head>
+
+<body>
+<nav>
+    <div class="logo">
+        <img src="img/voteLogo.png" alt="">
+    </div>
+    <ul>
+        <li><a href="#1"><i class="fa fa-home"></i> <em>Application</em></a></li>
+        <li><a href="#2"><i class="fa fa-user"></i> <em>Add Candidate</em></a></li>
+        <li><a href="#3"><i class="fa fa-user"></i> <em>Delete Candidate</em></a></li>
+        <li id="liVote"><a href="#4"><i class="fa fa-pencil"></i> <em>Vote</em></a></li>
+        <li><a href="#5"><i class="fa fa-pencil"></i> <em>Results of vote</em></a></li>
+    </ul>
+</nav>
+
+<div class="slides">
+
+    <div class="slide" id="1">
+        <div class="content first-content">
+            <div class="container-fluid">
+                <div class="col-md-3">
+                    <div class="author-image"><img src="img/vote.png" alt=""></div>
+                </div>
+                <div class="col-md-9">
+                    <h2>Student Vote</h2>
+                    <p>Etudiant en <em>Master 2 "Programmation et Logiciels Sûrs"</em>, au sein de l'univesité <em>Paris XIII.</em> Cet application s'inscrit dans le cadre d'un projet pour la matière <em>LEE</em>.</p>
+                  
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" id="2">
+        <div class="content form-content">
+            <div class="container-fluid">
+                <h2> Please enter the following informations about the candidate that you want to add </h2>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-6">
+                    </br></br>
+                    <form id="contact" action="/add-candidate" method="post">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <input name="firstName" type="text" class="form-control" id="firstName" placeholder="First Name..." required="">
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <input name="lastName" type="text" class="form-control" id="lastName" placeholder="Last Name..." required="">
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <input name="email" type="email" class="form-control" id="email" placeholder="Mail Address..." required="">
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <input name="age" type="text" class="form-control" id="age" placeholder="Age..." required=""></input>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <button type="submit" class="btn">Add Candidate</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" id="3">
+        <div class="content form-content">
+            <div class="container-fluid">
+                <h2> Please enter the name of the candidate that you want to delete </h2>
+                </br></br></br>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-6">
+                    <form id="contact" action="/delete-candidate" method="post">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <input name="firstName" type="text" class="form-control" id="firstName" placeholder="First Name..." required="">
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <button type="submit" class="btn">Delete Candidate</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                    </br></br></br>
+                    <h2> Send mail to the winner </h2>
+                    <form id="mail" action="/send-email" method="post">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <button type="submit" class="btn">Send Mail</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" id="4">
+        <div class="content first-content">
+            <div class="container">
+                <img src="img/votingPage.jpg" style="width:60%">
+                <button class="btnVote" id="candidate1" value="1"></button>
+                <button class="btnVote" id="candidate2" value="2"></button>
+                <button class="btnVote" id="candidate3" value="3"></button>
+                <button class="btnVote" id="candidate4" value="4"></button>
+                <input name="studentName" type="text" class="studentname" id="studentName" placeholder="Name" required="">
+                <input name="studentNumber" type="text" class="studentnumb" id="studentNumber" placeholder="Student Number" required="">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" id="5">
+        <div class="content graph-content">
+            <div class="container">
+                <div id='layout'>
+                    <div id='container'>
+                        <svg />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="Copyright">
+    <div class="content">
+        <p>Copyright &copy; 2019 Achraf Rk.</p>
+    </div>
+</div>
+
+
+</body>
+</html>
